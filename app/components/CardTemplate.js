@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, Image } from 'react-native';
-import { Card, CardItem, Left, Thumbnail, Body, Icon, Button } from 'native-base';
+import { Card, CardItem, Left, Thumbnail, Body, Icon, Button, Right } from 'native-base';
+import styles from './cardStyles';
 
 const CardTemplate = (props) => {
     const { dp, name, username, time, text, links, img, comments, repeats, hearts } = props;
@@ -12,42 +13,52 @@ const CardTemplate = (props) => {
                     <Thumbnail source={dp} />
                     <Body>
                         <Text>
-                            <Text>{name} </Text>
-                            <Text>{username} </Text>
-                            <Text>{time} <Icon name='arrow-dropdown' /></Text>
+                            <Text style={styles.name}>{name}  </Text>
+                            <Text style={styles.username}>{username}  </Text>
+                            <Text style={styles.username}>{time}    <Icon name='arrow-dropdown' /></Text>
                         </Text>
                         <Text>
-                            <Text>{text}</Text>
-                            <Text>{links}</Text>
+                            <Text style={styles.text}>{text} </Text>
+                            <Text style={styles.links}>{links}</Text>
                         </Text>
                     </Body>
                 </Left>
             </CardItem>
 
             <CardItem>
-                <Body>
-                    <Image style={{ flex: 1 }} source={img} />
+                <Body style={{ paddingLeft: 65 }}>
+                    <Image resizeMode='contain' style={{ flex: 1 }} source={img} />
                 </Body>
             </CardItem>
 
-            <CardItem>
+            <CardItem style={{ paddingLeft: 80 }}>
                 <Left>
                     <Button transparent>
-                        <Icon name="chatboxes" style={{ color: '#3BB9FF' }} />
+                        <Icon name="chatboxes" style={{ color: '#3BB9FF', paddingRight: 5 }} />
                         <Text>{comments}</Text>
                     </Button>
+                </Left>
+
+                <Left>
                     <Button transparent>
-                        <Icon name="repeat" style={{ color: '#3BB9FF' }} />
+                        <Icon name="repeat" style={{ color: '#3BB9FF', paddingRight: 5 }} />
                         <Text>{repeats}</Text>
                     </Button>
+                </Left>
+
+                <Left>
                     <Button transparent>
-                        <Icon name="heart" style={{ color: '#3BB9FF' }} />
+                        <Icon name="heart" style={{ color: '#3BB9FF', paddingRight: 5 }} />
                         <Text>{hearts}</Text>
                     </Button>
+                </Left>
+
+                <Left>
                     <Button transparent>
                         <Icon name="mail" style={{ color: '#3BB9FF' }} />
                     </Button>
                 </Left>
+
             </CardItem>
         </Card>
     );
