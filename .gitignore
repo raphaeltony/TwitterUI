@@ -53,5 +53,4 @@ buck-out/
 */fastlane/screenshots
 .eslintrc.json
 .vscode/settings.json
-package.json
 

@@ -25,10 +25,8 @@ const CardTemplate = (props) => {
                 </Left>
             </CardItem>
 
-            <CardItem>
-                <Body style={{ paddingLeft: 65 }}>
-                    <Image resizeMode='contain' style={{ flex: 1 }} source={img} />
-                </Body>
+            <CardItem cardBody>
+                <Image resizeMode='contain' style={styles.img} source={img} />
             </CardItem>
 
             <CardItem style={{ paddingLeft: 80 }}>

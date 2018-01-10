@@ -17,6 +17,13 @@ const styles = StyleSheet.create({
     links: {
         fontSize: 17,
         color: '#3BB9FF'
+    },
+    img: {
+        flex: 1,
+        width: 400,
+        height: 350,
+        alignSelf: 'flex-end',
+
     }
 });
 
