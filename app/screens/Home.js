@@ -7,6 +7,7 @@ import Dashboard from '../components/tabs/dash';
 import Search from '../components/tabs/search';
 import Notifications from '../components/tabs/notify';
 import Messages from '../components/tabs/message';
+import { TouchableOpacity } from 'react-native';
 
 
 
@@ -18,7 +19,9 @@ export default class App extends Component {
       <Container>
         <Header hasTabs style={styles.header}>
           <Left >
-            <Thumbnail source={require('../images/1.png')} />
+            <TouchableOpacity onPress={() => this.props.navigation.navigate('DrawerOpen')}>
+              <Thumbnail source={require('../images/1.png')} />
+            </TouchableOpacity>
           </Left>
           <Body>
             <Title style={{ color: 'black', alignContent: 'flex-start' }}>Home</Title>

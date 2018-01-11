@@ -23,14 +23,15 @@ export default class SideBar extends React.Component {
     render() {
         return (
             <Container>
-                <Content style={{ backgroundColor: 'white' }}>
+                <Content style={{ backgroundColor: 'white', flex: 1 }}>
                     <Card >
                         <CardItem >
                             <View style={{ flex: 1, flexDirection: 'column', justifyContent: 'flex-end' }}>
 
                                 <Thumbnail source={require('../images/1.png')} />
-                                <Text style={{ fontWeight: 'bold' }}>Raphael Tony</Text>
+                                <Text style={{ fontSize: 18, fontWeight: 'bold' }}>Raphael Tony</Text>
                                 <Text note>@raphaeltony</Text>
+                                <Text />
 
 
                                 <View style={{ flexDirection: 'row' }} >
@@ -41,7 +42,7 @@ export default class SideBar extends React.Component {
                         </CardItem>
 
 
-                        <CardItem style={{ elevation: 0, borderBottomWidth: 0.5, borderTopWidth: 0.5, borderColor: 'grey' }}>
+                        <CardItem style={{ elevation: 0, borderBottomWidth: 1, borderTopWidth: 1, borderColor: 'grey' }}>
 
                             <List
                                 dataArray={listData}
@@ -66,7 +67,7 @@ export default class SideBar extends React.Component {
                                 }}
                             />
                         </CardItem>
-                        <CardItem >
+                        <CardItem style={{ elevation: 0 }}>
                             <List>
                                 <ListItem>
                                     <Text>Settings and Privacy</Text>

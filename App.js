@@ -1,13 +1,12 @@
 import React from 'react';
 import { Drawer } from 'native-base';
-import SideBar from './app/screens/SideBar';
-import Home from './app/screens/Home';
+import Navigation from './app/config/Navigation';
 
 
 export default class App extends React.Component {
     render() {
         return (
-            <SideBar />
+            <Navigation />
         );
     }
 }
