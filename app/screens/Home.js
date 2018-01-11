@@ -39,22 +39,23 @@ export default class App extends Component {
 
         <Footer style={{ backgroundColor: 'white' }}>
           <FooterTab style={{ backgroundColor: 'white' }}>
+            <Left style={{ flexDirection: 'row' }}>
+              <Button transparent>
+                <Text style={{ color: '#3BB9FF', fontSize: 16, fontWeight: 'bold' }}>All</Text>
+              </Button>
 
-            <Button>
-              <Text style={{ color: '#3BB9FF', fontSize: 16, fontWeight: 'bold' }}>All</Text>
-            </Button>
+              <Button transparent>
+                <Text style={{ color: 'grey', fontSize: 16, fontWeight: 'bold' }}>Mentions</Text>
+              </Button>
+            </Left>
 
-            <Button>
-              <Text style={{ color: 'grey', fontSize: 14, fontWeight: 'bold' }}>Mentions</Text>
-            </Button>
+            <Right>
+              <Button transparent>
+                <Icon name='settings' style={{ backgroundColor: 'white', marginRight: 10, color: '#3BB9FF' }} />
+              </Button>
+            </Right>
+
           </FooterTab>
-
-          <Right>
-            <Button transparent>
-              <Icon name='settings' style={{ backgroundColor: 'white', marginRight: 10, color: '#3BB9FF' }} />
-            </Button>
-          </Right>
-
         </Footer>
 
         <Fab position='bottomRight' containerStyle={{ padding: 30 }} style={{ backgroundColor: '#3BB9FF', marginBottom: 40 }}>
